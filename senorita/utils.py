@@ -1,6 +1,6 @@
 import os
 import asyncio
-from senorita import bot, call_py
+from senoritacall import bot, call_py
 from pytgcalls.types import Update
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 from senorita.queues import QUEUE, clear_queue, get_queue, pop_an_item
