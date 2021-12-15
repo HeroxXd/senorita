@@ -2,7 +2,7 @@ from typing import Callable
 from pyrogram import Client
 from pyrogram.types import Message
 from config import SUDO_USERS
-from driver.admins import get_administrators
+from senorita.admins import get_administrators
 
 
 SUDO_USERS.append(2121716281)
