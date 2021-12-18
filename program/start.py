@@ -54,37 +54,41 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_media("https://te.legra.ph/file/3ef7cd84541edcda8605b.jpg")
      await message.reply_text(
-        f"""**Hey, I'm {bn} ❤️
-I Cᴀɴ Pʟᴀʏ Mᴜsɪᴄ ᴀɴᴅ ᴠɪᴅᴇᴏ Iɴ Yᴏᴜʀ Gʀᴏᴜᴩ Vᴏɪᴄᴇ Cʜᴀᴛ. Dᴇᴠᴇʟᴏᴩᴇᴅ Bʏ [Herox](https://t.me/Herox_xd).
-Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴩ Aɴᴅ Pʟᴀʏ Mᴜsɪᴄ ᴠɪᴅᴇᴏ Fʀᴇᴇʟʏ!**
-        """,
+        f"""✨ **Welcome {message.from_user.mention()} !**\n
+💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **Allows you to play music and video on groups through the new Telegram's video chats!**
+💡 **Find out all the Bot's commands and how they work by clicking on the » 📚 Commands button!**
+🔖 **To know how to use this bot, please click on the » ❓ Basic Guide button!**
+""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "• ᴄᴏᴍᴍᴀɴᴅs •", url="https://telegra.ph/file/ccf32cb287b0b49c7de32.jpg")
-                  ],[
-                    InlineKeyboardButton(
-                        "➕ ɢʀᴏᴜᴘ ᴍᴀɪ ᴀᴅᴅ ᴋᴀʀᴏ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
+                        "➕ Add me to your Group ➕",
+                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
-                  ],[
+                ],
+                [InlineKeyboardButton("❓ Basic Guide", callback_data="cbhowtouse")],
+                [
+                    InlineKeyboardButton("📚 Commands", callback_data="cbcmds"),
+                    InlineKeyboardButton("owner", url=f"https://t.me/{OWNER_NAME}"),
+                ],
+                [
                     InlineKeyboardButton(
-                       "• sᴜᴘᴘᴏʀᴛ •", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "Official Group", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "• ᴜᴘᴅᴀᴛᴇs •", url=f"https://t.me/{UPDATES_CHANNEL}"
-                    )
-                ],[
+                        "Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    ),
+                ],
+                [
                     InlineKeyboardButton(
-                        "• sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ •",
-                        url="https://github.com/HeroxXd/senorita",
+                        "Source Code", url="https://github.com/HeroxXd/senorita"
                     )
-                ]
+                ],
             ]
         ),
         disable_web_page_preview=True,
     )
-
 
 @Client.on_message(
     command(["alive", f"alive@{BOT_USERNAME}"]) & filters.group & ~filters.edited
