@@ -1,5 +1,5 @@
 # senorita
-waimt buddy work progress 
+ok vro 
 
 # 𝐎𝐰𝐧𝐞𝐫 👑
 
@@ -11,7 +11,13 @@ waimt buddy work progress
 </p>
 
 
+# Deployment 
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/HeroxXd/senorita)
+
+# string 
+
+[![GenerateString](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://replit.com/@levinalab/StringSession#main.py) ``Pyrogram``
 
 
 
