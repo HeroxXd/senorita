@@ -12,8 +12,8 @@ from config import (
     UPDATES_CHANNEL,
 )
 from program import __version__
-from driver.veez import user
-from driver.filters import command, other_filters
+from senoritacall import user
+from senorita.filters import command, other_filters
 from pyrogram import Client, filters
 from pyrogram import __version__ as pyrover
 from pytgcalls import (__version__ as pytover)
@@ -52,40 +52,34 @@ async def _human_time_duration(seconds):
     command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
 async def start_(client: Client, message: Message):
-    await message.reply_text(
-        f"""✨ **Welcome {message.from_user.mention()} !**\n
-💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **Allows you to play music and video on groups through the new Telegram's video chats!**
-
-💡 **Find out all the Bot's commands and how they work by clicking on the » 📚 Commands button!**
-
-🔖 **To know how to use this bot, please click on the » ❓ Basic Guide button!**
-""",
+    await message.reply_media("https://te.legra.ph/file/3ef7cd84541edcda8605b.jpg")
+     await message.reply_text(
+        f"""**Hey, I'm {bn} ❤️
+I Cᴀɴ Pʟᴀʏ Mᴜsɪᴄ ᴀɴᴅ ᴠɪᴅᴇᴏ Iɴ Yᴏᴜʀ Gʀᴏᴜᴩ Vᴏɪᴄᴇ Cʜᴀᴛ. Dᴇᴠᴇʟᴏᴩᴇᴅ Bʏ [Herox](https://t.me/Herox_xd).
+Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴩ Aɴᴅ Pʟᴀʏ Mᴜsɪᴄ ᴠɪᴅᴇᴏ Fʀᴇᴇʟʏ!**
+        """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to your Group ➕",
-                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-                    )
-                ],
-                [InlineKeyboardButton("❓ Basic Guide", callback_data="cbhowtouse")],
-                [
-                    InlineKeyboardButton("📚 Commands", callback_data="cbcmds"),
-                    InlineKeyboardButton("❤️ Donate", url=f"https://t.me/{OWNER_NAME}"),
-                ],
-                [
+                        "• ᴄᴏᴍᴍᴀɴᴅs •", url="https://telegra.ph/file/ccf32cb287b0b49c7de32.jpg")
+                  ],[
                     InlineKeyboardButton(
-                        "👥 Official Group", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "➕ ɢʀᴏᴜᴘ ᴍᴀɪ ᴀᴅᴅ ᴋᴀʀᴏ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
+                    )
+                  ],[
+                    InlineKeyboardButton(
+                       "• sᴜᴘᴘᴏʀᴛ •", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "📣 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
-                    ),
-                ],
-                [
-                    InlineKeyboardButton(
-                        "🌐 Source Code", url="https://github.com/levina-lab/video-stream"
+                        "• ᴜᴘᴅᴀᴛᴇs •", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
-                ],
+                ],[
+                    InlineKeyboardButton(
+                        "• sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ •",
+                        url="https://github.com/HeroxXd/senorita",
+                    )
+                ]
             ]
         ),
         disable_web_page_preview=True,
