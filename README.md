@@ -7,7 +7,7 @@ waimt buddy work progress
 
 
 <p align="left">
-  <img src="https://te.legra.ph/file/dfd4f0ecb919699f46956.jpg">
+  <img src="https://telegra.ph/file/ff4b575822230bff4aad9.jpg">
 </p>
 
 
