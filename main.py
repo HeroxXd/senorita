@@ -1,6 +1,6 @@
 import asyncio
 from pytgcalls import idle
-from senorita import call_py, bot
+from senoritacall import call_py, bot
 
 async def mulai_bot():
     print("[SENORITA]: STARTING BOT CLIENT")
