@@ -7,7 +7,7 @@ from asyncio import sleep
 
 from git import Repo
 from pyrogram.types import Message
-from driver.filters import command
+from senorita.filters import command
 from pyrogram import Client, filters
 from os import system, execle, environ
 from senorita.decorators import sudo_users_only
